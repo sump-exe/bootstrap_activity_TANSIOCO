@@ -4,9 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap5/css/bootstrap.css">
-    <title>Document</title>
+    <title>Sample Website with Bootstrap 5</title>
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Bootstrap 5 Website</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button class="btn btn-primary" type="button">Button</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="home">
+        <p>Version 5.3.8</p>
+        <h1>Build Fast, responsive sites with Bootstrap</h1>
+        <p>Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p>
+    </div>
+
+    <div id="features">
+        <h2>Powerful Features</h2>
+        <p>Designed to give you full control over your layout and functionality.</p>
+        <div>
+            <h3>Dark Mode Ready</h3>
+            <p>Built-in theme switcher using Bootstrap 5's native data-bs-theme attribute.</p>
+        </div>
+        <div>
+            <h3>100% Mobile First</h3>
+            <p>Fully fluid layout engineered to scale down seemlessly to mobile screens.</p>
+        </div>
+        <div>
+            <h3>Interactive UI</h3>
+            <p>Includes dynamic feedback toasts, sliders, and form validation logic.</p>
+        </div>
+    </div>
+
+    <div id="pricing">
+        <h2>Flexible Pricing</h2>
+        <p>Choose the plan that fits your business needs.</p>
+        <div class="col-md-4">
+            <h3>Starter</h3>
+            <h4>₱0.00 /mo</h4>
+            <ul>
+                <li>1 Project</li>
+                <li>Community Support</li>
+                <li>Custom Domain</li> <!-- Not -->
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h3>Pro Developer</h3>
+            <h4>₱49.00 /mo</h4>
+            <ul>
+                <li>Unlimited Projects</li>
+                <li>Priority Support</li>
+                <li>Custom Domain</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h3>Enterprise</h3>
+            <h4>₱109.00 /mo</h4>
+            <ul>
+                <li>Dedicated Server</li>
+                <li>24/7 Phone Support</li>
+                <li>SLA Guarantee</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="testimonials">
+        <h2>What People Say</h2>
+        <div>
+            <p>"This Bootstrap starter layout completely sped up my client workflow. Highly recommended!"</p>
+            <p>Calvin Placio, BSIT-Network Technology Track</p>
+            <p>Lead Developer, Code-Smart Solutions</p>
+        </div>
+        <div>
+            <p>"The dark mode toggle integration works like a charm. Extremely clean markup!"</p>
+            <p>Harrold Evangelista, BSIT-Business Analytics Track</p>
+            <p>UI/UX Designer</p>
+        </div>
+    </div>
 </body>
 </html>

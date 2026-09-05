@@ -26,13 +26,34 @@
             transform: translateY(-0.35rem);
             box-shadow: var(--bs-box-shadow-lg) !important;
         }
+
+        .theme-toggle {
+            width: 2.5rem;
+            height: 2.5rem;
+            font-family: "Segoe UI Symbol", sans-serif;
+        }
+
+        .footer-icon {
+            align-items: center;
+            display: inline-flex;
+            font-size: 1.5rem;
+            font-weight: 600;
+            height: 2.75rem;
+            justify-content: center;
+            width: 2.75rem;
+        }
+
+        .footer-icon-circle {
+            border: 2px solid currentColor;
+            border-radius: 50%;
+        }
     </style>
     <title>Sample Website with Bootstrap 5</title>
 </head>
-<body class="pt-5">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<body class="pt-5" data-bs-theme="light">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-dark" href="#">Bootstrap 5</a>
+            <a class="navbar-brand fw-bold" href="#">Bootstrap 5</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,7 +67,9 @@
                     <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <button class="btn btn-primary" type="button">Button</button>
+                        <button class="btn btn-outline-secondary rounded-circle p-2 theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">
+                            <span id="themeIcon" aria-hidden="true">&#x263E;&#xFE0E;</span>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -63,26 +86,26 @@
         </div>
     </div>
 
-    <div id="features" class="bg-light text-center py-5 px-3">
-        <h2 class="display-5 fw-bold text-dark mb-3">Powerful Features</h2>
+    <div id="features" class="bg-body-tertiary text-center py-5 px-3">
+        <h2 class="display-5 fw-bold mb-3">Powerful Features</h2>
         <p class="lead text-secondary mb-5">Designed to give you full control over your layout and functionality.</p>
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card pricing-card h-100 border-0 shadow-sm p-4 text-start">
-                        <h3 class="h4 fw-bold text-dark">Dark Mode Ready</h3>
+                        <h3 class="h4 fw-bold">Dark Mode Ready</h3>
                         <p class="text-secondary mb-0">Built-in theme switcher using Bootstrap 5's native data-bs-theme attribute.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card feature-card h-100 border-0 shadow-sm p-4 text-start">
-                        <h3 class="h4 fw-bold text-dark">100% Mobile First</h3>
+                        <h3 class="h4 fw-bold">100% Mobile First</h3>
                         <p class="text-secondary mb-0">Fully fluid layout engineered to scale down seemlessly to mobile screens.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card feature-card h-100 border-0 shadow-sm p-4 text-start">
-                        <h3 class="h4 fw-bold text-dark">Interactive UI</h3>
+                        <h3 class="h4 fw-bold">Interactive UI</h3>
                         <p class="text-secondary mb-0">Includes dynamic feedback toasts, sliders, and form validation logic.</p>
                     </div>
                 </div>
@@ -90,7 +113,7 @@
         </div>
     </div>
 
-    <div id="pricing" class="bg-white text-center text-dark py-5 px-3">
+    <div id="pricing" class="bg-body text-center py-5 px-3">
         <h2 class="display-5 fw-bold mb-3">Flexible Pricing</h2>
         <p class="lead text-secondary mb-5">Choose the plan that fits your business needs.</p>
         <div class="container">
@@ -136,7 +159,7 @@
         </div>
     </div>
 
-    <div id="testimonials" class="bg-light text-center text-dark py-5 px-3">
+    <div id="testimonials" class="bg-body-tertiary text-center py-5 px-3">
         <h2 class="display-5 fw-bold mb-4">What People Say</h2>
         <div class="container">
             <div id="testimonialCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="5000" data-bs-wrap="true">
@@ -168,7 +191,7 @@
         </div>
     </div>
 
-    <div id="contact" class="bg-white text-center text-dark py-5 px-3">
+    <div id="contact" class="bg-body text-center py-5 px-3">
         <h2 class="display-5 fw-bold mb-3">Get In Touch</h2>
         <p class="text-secondary mb-4">Fill out the form below to send us a live message.</p>
         <form class="container text-start" style="max-width: 50rem;">
@@ -196,7 +219,7 @@
         </form>
     </div>
 
-    <footer class="bg-light text-center text-secondary py-4">
+    <footer class="bg-body-tertiary text-center text-secondary py-4">
         <div class="container">
             <div class="d-flex justify-content-center gap-4 mb-3">
                 <a class="text-secondary text-decoration-none" href="#" aria-label="Facebook">f</a>
@@ -208,5 +231,17 @@
     </footer>
 
     <script src="bootstrap5/js/bootstrap.bundle.js"></script>
+    <script>
+        const themeToggle = document.getElementById("themeToggle");
+
+        themeToggle.addEventListener("click", () => {
+            const isDark = document.body.getAttribute("data-bs-theme") === "dark";
+            const nextTheme = isDark ? "light" : "dark";
+
+            document.body.setAttribute("data-bs-theme", nextTheme);
+            document.getElementById("themeIcon").innerHTML = isDark ? "&#x263E;&#xFE0E;" : "&#x2600;&#xFE0E;";
+            themeToggle.setAttribute("aria-label", `Switch to ${isDark ? "dark" : "light"} mode`);
+        });
+    </script>
 </body>
 </html>

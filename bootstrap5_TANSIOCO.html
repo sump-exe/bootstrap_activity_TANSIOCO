@@ -9,7 +9,7 @@
 <body class="pt-5">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">Bootstrap 5</a>
+            <a class="navbar-brand fw-bold text-dark" href="#">Bootstrap 5</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,29 +32,37 @@
 
     <div id="home" class="container-fluid bg-primary text-white text-center py-5 px-3 my-3">
         <div class="mx-5" style="margin-left: 10rem !important; margin-right: 10rem !important;">
-            <p class="d-inline-block bg-white border border-white rounded-pill text-primary px-3 py-15 mb-4">Version 5.3.8</p>
+            <p class="d-inline-block bg-white border border-white rounded-pill text-dark px-3 py-15 mb-4">Version 5.3.8</p>
             <h1 class="mb-3 fw-bold text-white display-3">Build Fast, responsive sites with Bootstrap</h1>
-            <p class="mb-4 opacity-50" style="font-size: 1.2rem !important;">Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p>
+            <p class="mb-4 opacity-50 lead" style="font-size: 1.2rem !important;">Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p>
             <button class="btn btn-light text-primary me-2 mb-2" type="button">Get Started</button>
             <button class="btn btn-primary border border-white text-white mb-2" type="button">Download Bootstrap 5.3.8</button>
         </div>
     </div>
 
-    <div id="features">
-        <h2>Powerful Features</h2>
-        <p>Designed to give you full control over your layout and functionality.</p>
-        <div class="row">
-            <div class="col-md-4">
-                <h3>Dark Mode Ready</h3>
-                <p>Built-in theme switcher using Bootstrap 5's native data-bs-theme attribute.</p>
-            </div>
-            <div class="col-md-4">
-                <h3>100% Mobile First</h3>
-                <p>Fully fluid layout engineered to scale down seemlessly to mobile screens.</p>
-            </div>
-            <div class="col-md-4">
-                <h3>Interactive UI</h3>
-                <p>Includes dynamic feedback toasts, sliders, and form validation logic.</p>
+    <div id="features" class="bg-light text-center py-5 px-3">
+        <h2 class="display-5 fw-bold text-dark mb-3">Powerful Features</h2>
+        <p class="lead text-secondary mb-5">Designed to give you full control over your layout and functionality.</p>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-start">
+                        <h3 class="h4 fw-bold text-dark">Dark Mode Ready</h3>
+                        <p class="text-secondary mb-0">Built-in theme switcher using Bootstrap 5's native data-bs-theme attribute.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-start">
+                        <h3 class="h4 fw-bold text-dark">100% Mobile First</h3>
+                        <p class="text-secondary mb-0">Fully fluid layout engineered to scale down seemlessly to mobile screens.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-start">
+                        <h3 class="h4 fw-bold text-dark">Interactive UI</h3>
+                        <p class="text-secondary mb-0">Includes dynamic feedback toasts, sliders, and form validation logic.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

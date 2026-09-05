@@ -55,10 +55,10 @@
 
     <div id="home" class="container-fluid bg-primary text-white text-center py-5 px-3 my-3">
         <div class="mx-5" style="margin-left: 10rem !important; margin-right: 10rem !important;">
-            <p class="d-inline-block bg-white border border-white rounded-pill text-dark px-3 py-15 mb-4">Version 5.3.8</p>
+            <p class="d-inline-block bg-white border border-white rounded-pill text-primary px-3 py-15 mb-4">Version 5.3.8</p>
             <h1 class="mb-3 fw-bold text-white display-3">Build Fast, responsive sites with Bootstrap</h1>
             <p class="mb-4 opacity-50 lead" style="font-size: 1.2rem !important;">Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p>
-            <button class="btn btn-light text-primary me-2 mb-2" type="button">Get Started</button>
+            <a class="btn btn-light text-primary text-decoration-none me-2 mb-2" href="#pricing">Get Started</a>
             <button class="btn btn-primary border border-white text-white mb-2" type="button">Download Bootstrap 5.3.8</button>
         </div>
     </div>
@@ -136,47 +136,77 @@
         </div>
     </div>
 
-    <div id="testimonials">
-        <h2>What People Say</h2>
-        <div>
-            <p>"This Bootstrap starter layout completely sped up my client workflow. Highly recommended!"</p>
-            <p>Calvin Placio, BSIT-Network Technology Track</p>
-            <p>Lead Developer, Code-Smart Solutions</p>
-        </div>
-        <div>
-            <p>"The dark mode toggle integration works like a charm. Extremely clean markup!"</p>
-            <p>Harrold Evangelista, BSIT-Business Analytics Track</p>
-            <p>UI/UX Designer</p>
+    <div id="testimonials" class="bg-light text-center text-dark py-5 px-3">
+        <h2 class="display-5 fw-bold mb-4">What People Say</h2>
+        <div class="container">
+            <div id="testimonialCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="5000" data-bs-wrap="true">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="mx-auto py-3" style="max-width: 48rem;">
+                            <p class="lead mb-3">"This Bootstrap starter layout completely sped up my client workflow. Highly recommended!"</p>
+                            <p class="fw-bold mb-1">Calvin Placio, BSIT-Network Technology Track</p>
+                            <p class="text-secondary mb-0">Lead Developer, Code-Smart Solutions</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="mx-auto py-3" style="max-width: 48rem;">
+                            <p class="lead mb-3">"The dark mode toggle integration works like a charm. Extremely clean markup!"</p>
+                            <p class="fw-bold mb-1">Harrold Evangelista, BSIT-Business Analytics Track</p>
+                            <p class="text-secondary mb-0">UI/UX Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
     </div>
 
-    <div id="contact">
-        <h2>Get In Touch</h2>
-        <p>Fill out the form below to send us a live message.</p>
-        <form>
-            <div class="row">
-                <div class="col-md-6 mb-3">
+    <div id="contact" class="bg-white text-center text-dark py-5 px-3">
+        <h2 class="display-5 fw-bold mb-3">Get In Touch</h2>
+        <p class="text-secondary mb-4">Fill out the form below to send us a live message.</p>
+        <form class="container text-start" style="max-width: 50rem;">
+            <div class="row g-3">
+                <div class="col-md-6">
                     <label for="firstname" class="form-label">First Name</label>
                     <input type="text" class="form-control" id="firstname" placeholder="Enter your first name">
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6">
                     <label for="lastname" class="form-label">Last Name</label>
                     <input type="text" class="form-control" id="lastname" placeholder="Enter your last name">
                 </div>
-                <div class="row">
-                    <div class="col-md-12 mb-3">
-                        <label for="email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email address">
-                    </div>
+                <div class="col-12">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email address">
                 </div>
-                <div class="row">
-                    <div class="col-md-12 mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
-                    </div>
+                <div class="col-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary w-100" type="submit">Submit Form</button>
                 </div>
             </div>
         </form>
     </div>
+
+    <footer class="bg-light text-center text-secondary py-4">
+        <div class="container">
+            <div class="d-flex justify-content-center gap-4 mb-3">
+                <a class="text-secondary text-decoration-none" href="#" aria-label="Facebook">f</a>
+                <a class="text-secondary text-decoration-none" href="#" aria-label="X">X</a>
+                <a class="text-secondary text-decoration-none" href="#" aria-label="GitHub">GH</a>
+            </div>
+            <p class="mb-0">&copy; 2026 Ma. Cassandra Tansioco. Built with Bootstrap 5.3.</p>
+        </div>
+    </footer>
+
+    <script src="bootstrap5/js/bootstrap.bundle.js"></script>
 </body>
 </html>

@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="bootstrap5/css/bootstrap.css">
     <title>Sample Website with Bootstrap 5</title>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body class="pt-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Bootstrap 5 Website</a>
+            <a class="navbar-brand fw-bold text-primary" href="#">Bootstrap 5</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -30,12 +30,14 @@
         </div>
     </nav>
 
-    <div id="home">
-        <p>Version 5.3.8</p>
-        <h1>Build Fast, responsive sites with Bootstrap</h1>
-        <p>Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p>
-        <button class="btn btn-primary" type="button">Get Started</button>
-        <button class="btn btn-outline-primary" type="button">Download Bootstrap 5.3.8</button>
+    <div id="home" class="container-fluid bg-primary text-white text-center py-5 px-3 my-3">
+        <div class="mx-5" style="margin-left: 10rem !important; margin-right: 10rem !important;">
+            <p class="d-inline-block bg-white border border-white rounded-pill text-primary px-3 py-15 mb-4">Version 5.3.8</p>
+            <h1 class="mb-3 fw-bold text-white display-3">Build Fast, responsive sites with Bootstrap</h1>
+            <p class="mb-4 opacity-50" style="font-size: 1.2rem !important;">Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p>
+            <button class="btn btn-light text-primary me-2 mb-2" type="button">Get Started</button>
+            <button class="btn btn-primary border border-white text-white mb-2" type="button">Download Bootstrap 5.3.8</button>
+        </div>
     </div>
 
     <div id="features">

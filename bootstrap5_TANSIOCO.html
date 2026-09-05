@@ -4,6 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap5/css/bootstrap.css">
+    <style>
+        .pricing-features li::before {
+            content: "\2713";
+            color: var(--bs-primary);
+            margin-right: 0.5rem;
+        }
+
+        .pricing-features li.unavailable::before {
+            content: "\00d7";
+            color: var(--bs-danger);
+        }
+
+        .pricing-card,
+        .feature-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .pricing-card:hover,
+        .feature-card:hover {
+            transform: translateY(-0.35rem);
+            box-shadow: var(--bs-box-shadow-lg) !important;
+        }
+    </style>
     <title>Sample Website with Bootstrap 5</title>
 </head>
 <body class="pt-5">
@@ -46,19 +69,19 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm p-4 text-start">
+                    <div class="card pricing-card h-100 border-0 shadow-sm p-4 text-start">
                         <h3 class="h4 fw-bold text-dark">Dark Mode Ready</h3>
                         <p class="text-secondary mb-0">Built-in theme switcher using Bootstrap 5's native data-bs-theme attribute.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm p-4 text-start">
+                    <div class="card feature-card h-100 border-0 shadow-sm p-4 text-start">
                         <h3 class="h4 fw-bold text-dark">100% Mobile First</h3>
                         <p class="text-secondary mb-0">Fully fluid layout engineered to scale down seemlessly to mobile screens.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm p-4 text-start">
+                    <div class="card feature-card h-100 border-0 shadow-sm p-4 text-start">
                         <h3 class="h4 fw-bold text-dark">Interactive UI</h3>
                         <p class="text-secondary mb-0">Includes dynamic feedback toasts, sliders, and form validation logic.</p>
                     </div>
@@ -67,36 +90,48 @@
         </div>
     </div>
 
-    <div id="pricing">
-        <h2>Flexible Pricing</h2>
-        <p>Choose the plan that fits your business needs.</p>
-        <div class="row">
-            <div class="col-md-4">
-                <h3>Starter</h3>
-                <h4>₱0.00 /mo</h4>
-                <ul>
-                    <li>1 Project</li>
-                    <li>Community Support</li>
-                    <li>Custom Domain</li> <!-- Not -->
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h3>Pro Developer</h3>
-                <h4>₱49.00 /mo</h4>
-                <ul>
-                    <li>Unlimited Projects</li>
-                    <li>Priority Support</li>
-                    <li>Custom Domain</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h3>Enterprise</h3>
-                <h4>₱109.00 /mo</h4>
-                <ul>
-                    <li>Dedicated Server</li>
-                    <li>24/7 Phone Support</li>
-                    <li>SLA Guarantee</li>
-                </ul>
+    <div id="pricing" class="bg-white text-center text-dark py-5 px-3">
+        <h2 class="display-5 fw-bold mb-3">Flexible Pricing</h2>
+        <p class="lead text-secondary mb-5">Choose the plan that fits your business needs.</p>
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-4">
+                    <div class="card feature-card h-100 border-0 shadow-sm p-4 text-start">
+                        <h3 class="h5 fw-bold">Starter</h3>
+                        <h4 class="display-6 fw-bold mb-3">₱0.00 <small class="fs-6 fw-normal">/mo</small></h4>
+                        <ul class="list-unstyled pricing-features text-secondary mb-4">
+                            <li class="mb-2">1 Project</li>
+                            <li class="mb-2">Community Support</li>
+                            <li class="mb-2 unavailable">Custom Domain</li>
+                        </ul>
+                        <button class="btn btn-outline-primary w-100 mt-auto" type="button">Sign Up Free</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card pricing-card h-100 border-primary shadow p-4 text-start position-relative">
+                        <span class="badge bg-primary position-absolute top-0 start-50 translate-middle">Most Popular</span>
+                        <h3 class="h5 fw-bold">Pro Developer</h3>
+                        <h4 class="display-6 fw-bold mb-3">₱49.00 <small class="fs-6 fw-normal">/mo</small></h4>
+                        <ul class="list-unstyled pricing-features text-secondary mb-4">
+                            <li class="mb-2">Unlimited Projects</li>
+                            <li class="mb-2">Priority Support</li>
+                            <li class="mb-2">Custom Domain</li>
+                        </ul>
+                        <button class="btn btn-primary w-100 mt-auto" type="button">Get Started Pro</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card pricing-card h-100 border-0 shadow-sm p-4 text-start">
+                        <h3 class="h5 fw-bold">Enterprise</h3>
+                        <h4 class="display-6 fw-bold mb-3">₱109.00 <small class="fs-6 fw-normal">/mo</small></h4>
+                        <ul class="list-unstyled pricing-features text-secondary mb-4">
+                            <li class="mb-2">Dedicated Server</li>
+                            <li class="mb-2">24/7 Phone Support</li>
+                            <li class="mb-2">SLA Guarantee</li>
+                        </ul>
+                        <button class="btn btn-outline-primary w-100 mt-auto" type="button">Contact Sales</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
